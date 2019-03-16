@@ -2,9 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
-if (is_touch_device()) {
-  $('.niokbutton').hide();
-}
+
 (function () {
     'use strict';
     /**
@@ -640,6 +638,7 @@ if (is_touch_device()) {
 
             if (IS_MOBILE) {
                 // Mobile only touch devices.
+		$('.niokbutton').hide();
                 this.touchController.addEventListener(Runner.events.TOUCHSTART, this);
                 this.touchController.addEventListener(Runner.events.TOUCHEND, this);
                 this.containerEl.addEventListener(Runner.events.TOUCHSTART, this);
