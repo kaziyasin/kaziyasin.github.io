@@ -32,16 +32,12 @@
     </div>
 </body>
 
-<script type="text/javascript">
-    var is_touch_device = 'ontouchstart' in document.documentElement;
-    var box = document.getElementById("messageBox");        
-    if(is_touch_device) box.style.visibility="hidden";
-</script>
 
 <script>
     document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode == 32) {
+    var is_touch_device = 'ontouchstart' in document.documentElement; 
+    if (evt.keyCode == 32 || is_touch_device) {
         var box = document.getElementById("messageBox");
         box.style.visibility="hidden";
     }
