@@ -37,23 +37,13 @@
     document.onkeydown = function(evt) {
     evt = evt || window.event;
     var is_touch_device = 'ontouchstart' in document.documentElement; 
-    if (evt.keyCode == 32) {
+    if (evt.keyCode == 32 || is_touch_device) {
         var box = document.getElementById("messageBox");
         box.style.visibility="hidden";
     }
 };
 </script>
 
-<script>
-    document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    var is_touch_device = 'ontouchstart' in document.documentElement; 
-    if (is_touch_device) {
-        var box = document.getElementById("messageBox");
-        box.style.visibility="hidden";
-    }
-};
-</script>
 
     
 </html>
