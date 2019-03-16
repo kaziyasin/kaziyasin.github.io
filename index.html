@@ -45,7 +45,10 @@
 
 <script type="text/javascript">
     var is_touch_device = 'ontouchstart' in document.documentElement;
-    if(is_touch_device) alert("touch is enabled!");
+    if(is_touch_device) {
+        var box = document.getElementById("messageBox");
+        box.style.visibility="hidden";
+    }
 </script>
 
     
