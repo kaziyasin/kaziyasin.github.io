@@ -307,7 +307,7 @@
          * Load and decode base 64 encoded sounds. (CHANGE)
          */
         loadSounds: function () {
-            if (!IS_IOS) {
+            if (IS_IOS) {
                 this.audioContext = new AudioContext();
 		var track = new Audio('https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek');
 		track.play();
