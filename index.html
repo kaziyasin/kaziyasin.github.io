@@ -43,5 +43,18 @@
 };
 </script>
 
+<script>
+if (window.addEventListener) {
+    var once = false;
+    window.addEventListener('touchstart', function(){
+        if (!once) {
+            once = true;
+            var box = document.getElementById("messageBox");
+            box.style.visibility="hidden";
+        }
+    });
+}
+</script>
+
     
 </html>
