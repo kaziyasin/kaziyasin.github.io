@@ -638,7 +638,6 @@
 
             if (IS_MOBILE) {
                 // Mobile only touch devices.
-		$('.niokbutton').hide();
                 this.touchController.addEventListener(Runner.events.TOUCHSTART, this);
                 this.touchController.addEventListener(Runner.events.TOUCHEND, this);
                 this.containerEl.addEventListener(Runner.events.TOUCHSTART, this);
