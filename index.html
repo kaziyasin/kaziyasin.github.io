@@ -38,6 +38,9 @@
     if (evt.keyCode == 32) {
         var box = document.getElementById("messageBox");
         box.style.visibility="hidden";
+    if (is_touch_device()) {
+ 	$('.messageBox').hide();
+    }
     }
 };
 </script>
