@@ -348,7 +348,7 @@
         },
 
         /**
-         * Game initialiser.
+         * Game initialiser CHANGE AUDIO.
          */
         init: function () {
             // Hide the static icon.
@@ -392,6 +392,26 @@
 
             window.addEventListener(Runner.events.RESIZE,
                 this.debounceResize.bind(this));
+
+	    window.addEventListener('load', function () {
+        	var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+	        var source = audioCtx.createBufferSource();
+        	var xhr = new XMLHttpRequest();
+	        xhr.open('GET', 'https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek');
+        	xhr.responseType = 'arraybuffer';
+	        xhr.addEventListener('load', function (r) {
+        	    audioCtx.decodeAudioData(
+                    	xhr.response, 
+                    	function (buffer) {
+                       		source.buffer = buffer;
+                        	source.connect(audioCtx.destination);
+                        	source.loop = false;
+                    	});
+            	    source.start(0);
+        	});
+        	xhr.send();
+   	    });
+
         },
 
         /**
@@ -635,6 +655,7 @@
             // Keys.
             document.addEventListener(Runner.events.KEYDOWN, this);
             document.addEventListener(Runner.events.KEYUP, this);
+		
 
             if (IS_MOBILE) {
                 // Mobile only touch devices.
