@@ -45,7 +45,7 @@
 
 <script>
     var is_touch_device = 'ontouchstart' in document.documentElement;
-    if(is_touch_device) {
+    if(is_touch_device && touchStarted == true) {
         var box = document.getElementById("messageBox");
         box.style.visibility="hidden";
     }
