@@ -43,13 +43,13 @@
 };
 </script>
 
+<p ontouchstart="myFunction()">Touch this paragraph to trigger a function that will write "Hello World".</p>
+
 <script>
-    var is_touch_device = 'ontouchstart' in document.documentElement;
-    if(is_touch_device && touchStarted == true) {
-        var box = document.getElementById("messageBox");
-        box.style.visibility="hidden";
+    function myFunction() {
+	var box = document.getElementById("messageBox");
+  	box.style.visibility="hidden";
     }
 </script>
-
     
 </html>
