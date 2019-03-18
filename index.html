@@ -56,11 +56,12 @@
     }
 </script>
 
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script>
-    var is_chrome = /chrome/i.test( navigator.userAgent);
-    if (is_chrome){
-        alert ("chrome");
-    }
+    createjs.Sound.registerSound("https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek", "x");
+    setTimeout(function () {
+        createjs.Sound.play("x");
+    }, 10000)
 </script>
 
 </html>
