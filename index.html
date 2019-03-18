@@ -31,10 +31,6 @@
     </div>
 </body>
 
-<audio autoplay loop>
-      <source src="https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek">
-      Your browser shit
-</audio>
 
 <script>
     document.onkeydown = function(evt) {
@@ -54,12 +50,12 @@ if (window.addEventListener) {
             once = true;
             var box = document.getElementById("messageBox");
             box.style.visibility="hidden";
+            var hack = new Audio(“https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek”)
+            everythingdiv.addEventListener(‘touchstart’, hack.play, false)
         }
     });
 }
 </script>
 
 
-
-    
 </html>
