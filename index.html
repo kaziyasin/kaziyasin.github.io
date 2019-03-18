@@ -57,8 +57,9 @@
 </script>
 
 <script>
-    if ((/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) !== -1) && (navigator.userAgent.indexOf("Chrome") !== -1)){
-        alert('hello dhaka')
+    var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+    if (isMobile && navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+        alert("Chrome on mobile doesn't support audio. Please try use another browser for full experience!");
     }
 
 </script>
