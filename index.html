@@ -32,10 +32,6 @@
 </body>
 
 <script>
-
-</script>
-
-<script>
     document.onkeydown = function(evt) {
     evt = evt || window.event; 
     if (evt.keyCode == 32) {
@@ -46,21 +42,19 @@
 </script>
 
 <script>
-if (window.addEventListener) {
-    var once = false;
-    window.addEventListener('touchstart', function(){
-        if (!once) {
-            once = true;
-            var box = document.getElementById("messageBox");
-            box.style.visibility="hidden";
-	    var track = new Audio('https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek');
-	    track.play();
-        }
-    });
-}
+    if (window.addEventListener) {
+        var once = false;
+        window.addEventListener('touchstart', function(){
+            if (!once) {
+                once = true;
+                var box = document.getElementById("messageBox");
+                box.style.visibility="hidden";
+                var track = new Audio('https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek');
+                track.play();
+            }
+        });
+    }
 </script>
 
 
-
-    
 </html>
