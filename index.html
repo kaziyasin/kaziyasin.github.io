@@ -59,8 +59,10 @@
 
 <script>
     var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
-    if (isMobile && navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-        alert("Some browsers on mobile don't support audio. For the full experience, try saving Shubodh on a PC!");
+    if (isMobile) {
+        alert("Some browsers on mobile don't support audio. For the full experience, try saving Shubodh on a PC!
+		
+		To proceed anyway on mobile, press OK");
     }
 
 </script>
