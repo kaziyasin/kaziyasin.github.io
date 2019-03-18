@@ -309,6 +309,9 @@
          */
         loadSounds: function () {
             if (!IS_IOS) {
+                if (/Mobi|Android/i.test(navigator.userAgent)) {
+                     alert("Hello");    
+                }
                 var track = new Audio('https://docs.google.com/uc?export=download&id=1zkrhV0uUKVzhkDRcVZ6iRFFhg9ftyTek');
                 track.play();
                 this.audioContext = new AudioContext();
