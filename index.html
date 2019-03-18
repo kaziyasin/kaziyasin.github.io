@@ -57,8 +57,9 @@
 </script>
 
 <script>
-    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-        alert("Chrome");
+    var is_chrome = /chrome/i.test( navigator.userAgent);
+    if (is_chrome){
+        alert ("chrome");
     }
 </script>
 
