@@ -58,13 +58,11 @@
 </script>
 
 <script>
-    var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
         alert("Some browsers on mobile don't support audio. For the full experience, try saving Shubodh on a PC!
-		
-		To proceed anyway on mobile, press OK");
+	       To proceed anyway on mobile, press OK");
     }
-
 </script>
 
 
