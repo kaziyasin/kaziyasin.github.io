@@ -57,10 +57,8 @@
 </script>
 
 <script>
-    var IS_IOS = /iPad|iPhone|iPod/.test(window.navigator.platform);
-    var IS_MOBILE = /Android/.test(window.navigator.userAgent) || IS_IOS
-    if ((IS_MOBILE) && (navigator.userAgent.indexOf("Chrome") !== -1)) {
-        alert("Hello");    
+    if (/iPad|iPhone|iPod/.test(window.navigator.platform) && navigator.userAgent.indexOf("Chrome") !== -1){
+        alert('hello')
     }
 </script>
 
