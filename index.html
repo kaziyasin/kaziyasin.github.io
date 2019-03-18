@@ -57,8 +57,11 @@
 </script>
 
 <script>
-    if ((/iPad|iPhone|iPod/.test(window.navigator.platform) == -1) && (navigator.userAgent.indexOf("Chrome") !== -1)){
+    if ((navigator.userAgent.indexOf("Chrome") !== -1)){
         alert('hello')
+    }
+    if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+        alert('heloooo')
     }
 </script>
 
