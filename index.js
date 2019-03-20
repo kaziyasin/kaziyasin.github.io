@@ -561,10 +561,6 @@
 
                 if (!collision) {
                     this.distanceRan += this.currentSpeed * deltaTime / this.msPerFrame;
-		    if (this.distanceRan > 60000) {
-                	this.gameOver();
-            	    }
-
                     if (this.currentSpeed < this.config.MAX_SPEED) {
                         this.currentSpeed += this.config.ACCELERATION;
                     }
